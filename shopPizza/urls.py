@@ -15,9 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+from django.contrib.auth import views as auth_views
+
 from pizzashopapp import views
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('pizzashop/sign-in/', auth_views.login, 
+    {'template_name':'pizzashop/sign_in.html'}, name='pizzashop-sign-in'),
+    path('pizzashop/sign-out/', auth_views.logout, 
+    {'next_page':'/'}, name='pizzashop-sign-out'),
+    path('pizzashop/', views.pizzashop_home, name='pizzashop-home'),
+    path('pizzashop/sign-up/', views.pizzashop_sign_up, name='pizzashop-sign-up'),
 ]
