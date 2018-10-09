@@ -20,7 +20,9 @@ from django.contrib.auth import views as auth_views
 
 from pizzashopapp import views
 
-
+#Для медиа файлов
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,4 +33,4 @@ urlpatterns = [
     {'next_page':'/'}, name='pizzashop-sign-out'),
     path('pizzashop/', views.pizzashop_home, name='pizzashop-home'),
     path('pizzashop/sign-up/', views.pizzashop_sign_up, name='pizzashop-sign-up'),
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
