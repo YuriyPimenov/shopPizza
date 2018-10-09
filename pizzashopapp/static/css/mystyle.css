@@ -1,0 +1,11 @@
+.bg-ruby{
+    background-color: #7B2324;
+}
+.btn-red{
+    color: white;
+    background-color: #e21e35;
+}
+.btn-red:hover,.btn-red:focus{
+    color: white;
+    background-color: #ec4d57;
+}

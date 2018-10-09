@@ -10,8 +10,27 @@
     <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
 </head>
-<body>
-    {% block heading %}{% endblock %}
-    {% block content %}{% endblock %}  
+<body class="bg-ruby">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4 col-md-4 offset-md-4 col-sm-4 offset-sm-4">
+                <br>
+                <br>
+                <br>
+                <div class="card card-body">
+                    <div class="card-body">
+                        <h3 class="text-center text-uppercase">
+                            <b>{% block heading %}{% endblock %}</b>
+                        </h3>
+                        <br>
+                        {% block content %}{% endblock %}  
+                    </div>
+                </div>
+            </div>
+                     
+        </div>
+    </div>   
+    
+    <br>
 </body>
 </html>
