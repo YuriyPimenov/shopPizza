@@ -41,3 +41,13 @@ def pizzashop_sign_up(request):
             'pizzashop_form':pizzashop_form
         }
     )
+
+@login_required(login_url='/pizzashop/sign-in/')
+def pizzashop_account(request):
+    return render(request,'pizzashop/account.html',{})
+
+
+
+@login_required(login_url='/pizzashop/sign-in/')
+def pizzashop_pizza(request):
+    return render(request,'pizzashop/pizza.html',{})
