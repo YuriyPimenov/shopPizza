@@ -65,7 +65,7 @@ body{
     padding-left: 60px;
     padding-right: 30px;
 }
-.sidebar .list-group .list-group-item:active,
+.sidebar .list-group .active,
 .sidebar .list-group .list-group-item:hover{
     color: #e0deeb;
     background-color: #3f1e1e;
