@@ -38,5 +38,7 @@ urlpatterns = [
     path('pizzashop/pizza/', views.pizzashop_pizza, name='pizzashop-pizza'),
     path('pizzashop/pizza/add/', views.pizzashop_add_pizza, name='pizzashop-add-pizza'),
     path('pizzashop/pizza/edit/<int:pizza_id>', views.pizzashop_edit_pizza, name='pizzashop-edit-pizza'),
-    path('api/client/pizzashops/', apis.client_get_pizzashops)
+    # API
+    path('api/client/pizzashops/', apis.client_get_pizzashops),
+    path('api/client/pizzas/<int:pizzashop_id>', apis.client_get_pizzas),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
